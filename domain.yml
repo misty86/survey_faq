@@ -1,0 +1,42 @@
+version: "3.0"
+
+intents:
+  - greet
+  - yes
+  - no
+  - country
+  - salary
+  - location
+  - work_schedule
+  - start_time
+  - help
+  - spam
+ 
+entities:
+  - russia
+  - kazakhstan
+  - belarus
+  - uzbecistan
+  - time
+  
+slots:
+  russia:
+    type:
+      string
+  kazakhstan:
+    type:
+      string
+  belarus:
+    type:
+      string
+  uzbecistan:
+    type:
+      string
+  time:
+    type:
+      any
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

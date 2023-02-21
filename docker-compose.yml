@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  rasa:
+    image: rasa/rasa:3.4.4-full
+    networks: ['rasa-network']
+    ports:
+      - '5005:5005'
+    volumes:
+      - ./:/app
+    command:
+      - run
+      - -m test.tar.gz
+      - --enable-api
+  bot:
+    build: .
+    networks: ['rasa-network']
+    environment:
+      - RASA_URI=http://survey_faq_rasa_1:5005
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./docker/app/conf:/opt/jaicf/conf
+    links:
+      - rasa
+    depends_on:
+      - rasa
+networks: {rasa-network: {}}
