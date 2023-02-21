@@ -13,7 +13,7 @@ val logback = "1.3.0-alpha12"
 val hoplite = "1.4.16"
 
 application {
-    mainClassName = "com.survey_faq.connections.Local_tgKt"
+    mainClassName = "com.survey_faq.connections.TelegramLocalKt"
 }
 
 repositories {

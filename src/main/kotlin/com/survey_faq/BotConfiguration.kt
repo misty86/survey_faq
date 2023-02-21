@@ -12,6 +12,7 @@ import com.justai.jaicf.logging.Slf4jConversationLogger
 import com.sksamuel.hoplite.ConfigLoader
 import com.sksamuel.hoplite.PropertySource
 
+private val rasaApi = RasaApi(System.getenv("RASA_URL") ?: "http://localhost:5005")
 private val applicationConfigLoader = ConfigLoader.Builder()
     .addSource(PropertySource.resource("/config.yml", optional = false))
     .build()
@@ -27,6 +28,6 @@ val bot = BotEngine(
         BaseEventActivator,
         RegexActivator,
         CatchAllActivator,
-        RasaIntentActivator.Factory(RasaApi(Configuration.rasa.uri), confidenceThreshold = 0.95)
+        RasaIntentActivator.Factory(rasaApi, confidenceThreshold = 0.95)
     )
 )

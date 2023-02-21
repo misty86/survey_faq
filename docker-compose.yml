@@ -15,7 +15,7 @@ services:
     build: .
     networks: ['rasa-network']
     environment:
-      - RASA_URI=http://survey_faq_rasa_1:5005
+      - RASA_URL=http://survey_faq_rasa_1:5005
     ports:
       - '8080:8080'
     volumes:
