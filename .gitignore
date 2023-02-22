@@ -10,3 +10,4 @@ managers/mapdb/.mapdb
 /data
 *.json
 *.txt
+/build

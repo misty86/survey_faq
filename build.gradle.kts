@@ -13,7 +13,7 @@ val logback = "1.3.0-alpha12"
 val hoplite = "1.4.16"
 
 application {
-    mainClassName = "com.survey_faq.connections.ConsoleKt"
+    mainClassName = "com.survey_faq.connections.TelegramLocalKt"
 }
 
 repositories {
@@ -39,7 +39,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
     implementation ("io.github.rburgst:okhttp-digest:2.6")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
-    implementation("com.just-ai.jaicf:mongo:$jaicf")
     implementation("com.sksamuel.hoplite:hoplite-core:$hoplite")
     implementation("com.sksamuel.hoplite:hoplite-yaml:$hoplite")
     implementation("com.just-ai.jaicf:rasa:$jaicf")

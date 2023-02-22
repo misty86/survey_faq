@@ -1,5 +1,0 @@
-telegram:
-  token: 1089751324:AAGeQ1zf8GZpIX_bOABYV2v5p_NSalhiC-I
-#rasa:
-#  uri: ${RASA_URI} #docker-compose
-##  uri: http://localhost:5005 #dev
