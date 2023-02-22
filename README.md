@@ -1,4 +1,5 @@
 Запуск бота на стенде:
+
 0. добавьте токен своего бота в ```src/main/resources/config.yml```
 1. sudo apt install docker-compose
 2. sudo apt install gradle
